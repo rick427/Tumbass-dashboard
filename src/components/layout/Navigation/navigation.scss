@@ -3,18 +3,73 @@
 
 .navigation {
   height: 100%;
-  flex: 0.2;
+  flex: 0.18;
   border-right: 2px solid $color-grey-light;
   @include flex-column;
 
   &__nav {
     flex: 1;
-    padding: 3rem 2rem;
-    border: 1px solid grey;
+
+    &__list {
+      padding: 3rem 0;
+
+      &__tile {
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 800;
+          color: $color-secondary;
+          text-transform: capitalize;
+          margin-bottom: 1.5rem;
+        }
+
+        &__item {
+          font-size: 1.4rem;
+          text-transform: capitalize;
+          color: $color-tertiary;
+          font-weight: 600;
+          transition: all 300ms ease;
+
+          i {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 1.5rem;
+          }
+
+          &:hover {
+            color: $color-primary;
+            cursor: pointer;
+          }
+        }
+
+        .active {
+          color: $color-primary;
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 0.4rem;
+            height: 2.5rem;
+            background-color: $color-primary;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 20px;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 2.5rem;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 1296px) {
-    flex: 0.25;
+    flex: 0.22;
   }
 
   @media only screen and (max-width: 1165px) {
