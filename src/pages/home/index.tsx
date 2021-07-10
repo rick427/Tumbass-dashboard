@@ -1,12 +1,13 @@
 import React from 'react';
 
 import './home.scss';
+import Layout from '../../components/layout/Layout';
 
 const HomePage: React.FC = () => {
     return (
-        <div className="home">
-            HELLO FROM HOME
-        </div>
+        <Layout>
+            CONTENT GOES HERE
+        </Layout>
     )
 }
 

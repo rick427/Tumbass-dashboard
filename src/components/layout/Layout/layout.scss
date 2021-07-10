@@ -1,0 +1,12 @@
+.layout {
+  padding: 3rem;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+
+  &__content {
+    flex: 1;
+    height: 100%;
+    border: 1px solid blue;
+  }
+}

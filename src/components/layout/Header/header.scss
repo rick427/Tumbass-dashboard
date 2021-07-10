@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.header {
+  @include flex-row;
+
+  &__logo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    @include flex-center;
+
+    img {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    color: $color-primary;
+  }
+}

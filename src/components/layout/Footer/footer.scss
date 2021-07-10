@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+
+.footer {
+  display: block;
+
+  &__title {
+    color: $color-dark;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  &__text {
+    width: 80%;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+}

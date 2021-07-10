@@ -1,0 +1,23 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.navigation {
+  height: 100%;
+  flex: 0.2;
+  border-right: 2px solid $color-grey-light;
+  @include flex-column;
+
+  &__nav {
+    flex: 1;
+    padding: 3rem 2rem;
+    border: 1px solid grey;
+  }
+
+  @media only screen and (max-width: 1296px) {
+    flex: 0.25;
+  }
+
+  @media only screen and (max-width: 1165px) {
+    display: none;
+  }
+}
