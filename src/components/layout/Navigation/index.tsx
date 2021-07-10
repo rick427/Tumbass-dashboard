@@ -9,7 +9,11 @@ const Navigation: React.FC = () => {
         <aside className="navigation">
             <Header/>
             <nav className="navigation__nav">
-                NAVIGATION LIST!
+                <ul className="navigation__nav__list">
+                    <li className="navigation__nav__list__item">
+                        
+                    </li>
+                </ul>
             </nav>
             <Footer/>
         </aside>
