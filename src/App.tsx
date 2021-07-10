@@ -1,10 +1,15 @@
-import React from 'react'
+import React, {Fragment} from 'react';
+import {Switch, Route} from 'react-router-dom';
+
+import Home from './pages/home';
 
 const App:React.FC = () => {
     return (
-        <div>
-            WELCOME HOME
-        </div>
+        <Fragment>
+            <Switch>
+                <Route path="/" component={Home}/>
+            </Switch>
+        </Fragment>
     )
 }
 
