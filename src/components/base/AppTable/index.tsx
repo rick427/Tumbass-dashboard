@@ -47,7 +47,7 @@ const AppTable: React.FC = () => {
                             </figure>
                         </td>
                         <td>
-                            <h2>Game console</h2>
+                            <h2>Console</h2>
                             <p>#2807856940</p>
                         </td>
                         <td>Aug 15, 2020</td>

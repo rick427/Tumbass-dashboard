@@ -22,10 +22,12 @@ const HomePage: React.FC = () => {
                         <input placeholder="Search for product"/>
                     </div>
 
-                    <h1 className="overview__title">Overview</h1>
+                    <div className="">
+                        <h1 className="overview__title">Overview</h1>
 
-                    <div className="overview__grid">
-                        <Metrics metric={metrics}/>
+                        <div className="overview__grid">
+                            <Metrics metric={metrics}/>
+                        </div>
                     </div>
                     
                     <div className="overview__graph">
@@ -120,7 +122,7 @@ const HomePage: React.FC = () => {
                                         <img src={product1} alt="product-1"/>
                                     </figure>
                                     <div>
-                                        <h2>Lenovo Legion</h2>
+                                        <h2>Legion</h2>
                                         <p>2 Minutes Ago</p>
                                     </div>
                                 </div>
@@ -132,7 +134,7 @@ const HomePage: React.FC = () => {
                                         <img src={product2} alt="product-1"/>
                                     </figure>
                                     <div>
-                                        <h2>Game Console</h2>
+                                        <h2>Console</h2>
                                         <p>2 Minutes Ago</p>
                                     </div>
                                 </div>

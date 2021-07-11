@@ -107,7 +107,6 @@ const options = {
 const Graph: React.FC = () => {
     return (
         <div>
-            <p>Income</p>
             <Bar 
                 width={100} 
                 height={20} 

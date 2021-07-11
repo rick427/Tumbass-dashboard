@@ -8,9 +8,11 @@
 
   .overview {
     flex: 0.75;
+    height: auto;
     align-self: stretch;
-    height: 100%;
     padding: 0 4rem;
+    @include flex-column;
+    justify-content: space-between;
 
     &__search {
       width: 100%;
@@ -52,8 +54,12 @@
 
     &__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 2em;
+
+      @media only screen and (max-width: 500px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
     }
 
     &__graph {
@@ -76,13 +82,32 @@
         margin-bottom: 1rem;
       }
     }
+
+    @media only screen and (max-width: 1240px) {
+      padding: 0 5rem;
+      flex: 1;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      padding: 0 3rem;
+    }
+
+    @media only screen and (max-width: 750px) {
+      padding: 0 1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+      min-height: 100vh;
+    }
   }
 
   .summary {
     flex: 0.25;
     align-self: stretch;
-    padding: 0 4rem;
+    padding: 0 3rem;
     border-left: 2px solid $color-grey-light;
+    @include flex-column;
+    justify-content: space-between;
 
     &__icons {
       @include flex-center-between;
@@ -102,16 +127,16 @@
     }
 
     &__logo {
-      width: 9rem;
-      height: 9rem;
+      width: 8rem;
+      height: 8rem;
       border-radius: 50%;
       background-color: $color-primary;
       margin: 3.5rem auto 1.5rem auto;
       @include flex-center;
 
       img {
-        width: 5rem;
-        height: 5rem;
+        width: 4rem;
+        height: 4rem;
       }
     }
 
@@ -122,7 +147,7 @@
     }
 
     &__info {
-      padding: 1.5rem 2rem;
+      padding: 1.5rem;
       margin: 3rem 0;
       border-radius: 6px;
       border: 2px solid $color-grey-light;
@@ -176,7 +201,7 @@
 
     &__progress {
       margin: 1rem 0;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       border-radius: 6px;
       border: 2px solid $color-grey-light;
       @include flex-row;
@@ -326,6 +351,14 @@
           color: $color-success;
         }
       }
+    }
+
+    @media only screen and (max-width: 1296px) {
+      padding: 0 2rem;
+    }
+
+    @media only screen and (max-width: 1240px) {
+      display: none;
     }
   }
 }

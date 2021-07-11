@@ -2,10 +2,11 @@
 @import "../../../styles/mixins";
 
 .navigation {
-  height: 100%;
   flex: 0.18;
+  height: 100%;
   border-right: 2px solid $color-grey-light;
   @include flex-column;
+  justify-content: space-between;
 
   &__nav {
     flex: 1;
