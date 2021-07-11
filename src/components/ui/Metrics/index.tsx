@@ -10,7 +10,7 @@ const Metrics: React.FC<IProps> = ({metric}) => {
             <div key={el.id} className="overview__grid__card">        
                 <div className="overview__grid__card__icons">
                    <i className={`${el.icon} ${el.color}`}/>
-                   <span className="success">{el.percent}</span>
+                   <span className={el.status}>{el.percent}</span>
                </div>
                <h1>${el.amount.toLocaleString()}</h1>
                <p>{el.title}</p>
@@ -18,7 +18,7 @@ const Metrics: React.FC<IProps> = ({metric}) => {
         ))
     };
 
-    return renderMetric();
+    return <>{renderMetric()}</>
 }
 
 export default Metrics;

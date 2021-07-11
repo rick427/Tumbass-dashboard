@@ -6,6 +6,7 @@ export interface IMetric{
         title: string,
         amount: number,
         color: string,
+        status: string,
     }[]
 };
 
@@ -17,6 +18,7 @@ export const metrics: IMetric["metric"] = [
         amount: 27340,
         icon: 'bi-basket3-fill',
         color: 'orange',
+        status: 'success',
     },
     {
         id: 2,
@@ -25,6 +27,7 @@ export const metrics: IMetric["metric"] = [
         amount: 11125,
         icon: 'bi-pie-chart-fill',
         color: 'purple',
+        status: 'danger',
     },
     {
         id: 3,
@@ -33,6 +36,7 @@ export const metrics: IMetric["metric"] = [
         amount: 18260,
         icon: 'bi-people-fill',
         color: 'success',
+        status: 'success',
     },
     {
         id: 4,
@@ -41,5 +45,6 @@ export const metrics: IMetric["metric"] = [
         amount: 11340,
         icon: 'bi-cart-dash-fill',
         color: 'danger',
+        status: 'danger',
     },
 ]
